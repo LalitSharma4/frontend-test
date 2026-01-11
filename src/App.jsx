@@ -1,14 +1,14 @@
-function App() {
-  
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ApiData from "./pages/Apidata";
 
+function App() {
   return (
-    <>
-      <h1 className="text-4xl font-bold text-indigo-600">
-        Clinic project ready on vercel
-        All set to go!
-      </h1> 
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/apidata" element={<ApiData />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
